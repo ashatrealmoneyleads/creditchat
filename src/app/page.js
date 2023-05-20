@@ -61,7 +61,7 @@ export default function Home() {
           <h2>
             Learn <span>-&gt;</span>
           </h2>
-          <p>I can do this... Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
+          <p>I can fucking do this... Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
         </a>
 
         <a
