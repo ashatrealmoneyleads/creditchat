@@ -1,9 +1,18 @@
-export default function handler(req, res) {
-    const message = req.body.message;
+import axios from 'axios';
 
-    // This is a very basic "chatbot" that just echoes back the user's message.
-    // You could replace this with a call to a more sophisticated chatbot service.
-    const reply = `You said: ${message}`;
+export default async function handler(req, res) {
+    if (req.method === 'POST') {
+        // Extract the message from the request body
+        const { message } = req.body;
 
-    res.status(200).json({ reply });
+        // Send the message to your Flask server
+        const response = await axios.post('https://your-flask-server-url/chatbot', { message });
+
+        // Send the response from your Flask server back to the client
+        res.status(200).json({ message: response.data.response });
+    } else {
+        // Handle any other HTTP method
+        res.setHeader('Allow', ['POST']);
+        res.status(405).end(`Method ${req.method} Not Allowed`);
+    }
 }
