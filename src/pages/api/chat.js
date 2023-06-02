@@ -6,7 +6,7 @@ export default async function handler(req, res) {
         const { message } = req.body;
 
         // Send the message to your Flask server
-        const response = await axios.post('https://creditchat01.ts.r.appspot.com', { message });
+        const response = await axios.post('https://creditchat01.ts.r.appspot.com/chatbot', { message });
 
         // Send the response from your Flask server back to the client
         res.status(200).json({ message: response.data.response });
