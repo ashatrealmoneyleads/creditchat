@@ -34,7 +34,7 @@ export default function Chat() {
                     type="text"
                     value={message}
                     onChange={e => setMessage(e.target.value)}
-                    placeholder="Oh come on..."
+                    placeholder="Test text here..."
                 />
                 <button type="submit">Send</button>
             </form>
