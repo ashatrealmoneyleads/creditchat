@@ -7,6 +7,9 @@ export default function Chat() {
     async function sendChat(e) {
         e.preventDefault();
 
+        // driving me crazy
+        console.log('Sending chat:', message);
+
         const response = await fetch('/api/chatbot', {
             method: 'POST',
             headers: {
@@ -16,6 +19,9 @@ export default function Chat() {
         });
 
         const data = await response.json();
+
+        // checking output
+        console.log('Received response:', data);
 
         setChat([...chat, { message: data.reply, type: 'bot' }]);
         setMessage('');
