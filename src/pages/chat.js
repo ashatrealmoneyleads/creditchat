@@ -28,7 +28,7 @@ export default function Chat() {
                     type="text"
                     value={message}
                     onChange={e => setMessage(e.target.value)}
-                    placeholder="Chat prompt goes here..."
+                    placeholder="Oh come on..."
                 />
                 <button type="submit">Send</button>
             </form>
