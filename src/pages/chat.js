@@ -10,7 +10,7 @@ export default function Chat() {
         // driving me crazy
         console.log('Sending chat:', message);
 
-        const response = await fetch('/api/chatbot', {
+        const response = await fetch('/api/chat', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
