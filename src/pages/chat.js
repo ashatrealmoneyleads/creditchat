@@ -7,7 +7,7 @@ export default function Chat() {
     async function sendChat(e) {
         e.preventDefault();
 
-        const response = await fetch('/api/chat', {
+        const response = await fetch('/api/chatbot', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
